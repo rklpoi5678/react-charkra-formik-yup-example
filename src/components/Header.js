@@ -42,9 +42,11 @@ const Header = () => {
       const headerElement = headerRef.current;
 
       if (!headerElement) return;
-      if (prevScrollPos > currentScrollPos)
+      if (prevScrollPos > currentScrollPos) {
         headerElement.style.transform = "translateY(0)";
-      headerElement.style.transform = "translateY(-200px)";
+      } else {
+        headerElement.style.transform = "translateY(-200px)";
+      }
 
       prevScrollPos = currentScrollPos;
     };
